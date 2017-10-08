@@ -5,6 +5,27 @@
 	<title>demo2</title>
 </head>
 <body>
-	
+	<script type="text/javascript">
+		var o1 = {
+			name:'joe',
+			getName:function(){
+				return this.name;
+			}
+		};
+		console.log(o1.getName());
+
+		var f1 = function(){
+			return this;
+		};
+		console.log(f1.call(o1));
+		console.log(f1()==window);
+
+		var a1 = [1,2,3,4];
+		var o2 = {};
+		for(var i=0;i<a1.length;i++){
+			eval("o2.p"+i+'='+a1[i]);
+		};
+		console.log(o2);
+	</script>
 </body>
 </html>

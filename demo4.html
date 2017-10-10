@@ -5,6 +5,26 @@
 	<title>demo4</title>
 </head>
 <body>
-	
+	<button id="btn">button</button>
+	<button id="btn2">button2</button>
+	<button id="btn3">button3</button>
+	<button id="btn4">button4</button>
+	<script type="text/javascript">
+		var hello = function(){
+			console.log('hello');
+		};
+		var world = function(){
+			console.log('world');
+		}
+		var btn1 = document.getElementById('btn'); 
+		btn1.addEventListener('click', hello, false);
+		btn1.addEventListener('click', world, false);
+
+		function print(x){
+			console.log(x);
+		};
+		var btn2 = document.getElementById("btn2");
+		btn2.addEventListener('click', function(){print('hello world')}, false);
+	</script>
 </body>
 </html>

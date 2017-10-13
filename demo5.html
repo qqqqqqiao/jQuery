@@ -1,1 +1,39 @@
-demo5.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo5</title>
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+	<style type="text/css">
+		.c1{
+			width: 100px;
+			border: 1px black solid;
+		}
+		.c2{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div>hello</div>
+	<button id='b1' value="hello"></button>
+
+	<div id="id1">hello world</div>
+	<script type="text/javascript">
+		var divS1 = document.querySelector('div').style;
+		divS1.cssText = 'background-color: red;';
+
+		$('#b1').click(function() {
+			console.log(1);
+			$("input[type='button']").val('world');
+			
+			console.log($("input[type='button']").val());
+		}); 
+
+		$('#id1').addClass('c1 c2');
+		console.log($('#id1').css('background-color'));
+
+		$('#id1').css('background-color', 'red');
+	</script>
+</body>
+</html>

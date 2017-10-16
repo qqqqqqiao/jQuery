@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo7</title>
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+</head>
+<body>
+	<div class="c0">
+		<div class="c1">hello</div>
+	</div>
+	<script type="text/javascript">
+		$('.c1').click(function(event) {
+			console.log(1);
+			$('.c0').append($('.c1').clone(true));
+		});
+	</script>
+</body>
+</html>

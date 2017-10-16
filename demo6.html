@@ -7,12 +7,17 @@
 </head>
 <body>
 	<div id="d1"><div id="d2">hello</div></div>
+
 	<button id="b1">click</button>
 	<script type="text/javascript">
 		$('#b1').click(function() {
 			//$('#d1').append('<div>hello2</div>');
 			$('<div>hello0</div>').appendTo('#d2');
 		});
+		$(document).ready(function() {
+			alert($("div:contains(h)"));
+		});
+
 	</script>
 </body>
 </html>

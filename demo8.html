@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+	<title>demo8</title>
+</head>
+<body>
+	<div>
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+		<button id="b1">click</button>
+	</div>
+	<script type="text/javascript">
+		$('#b1').bind('click', function(event) {
+			$('div p:eq(1)').replaceWith('<p>222</p>');
+		});
+		
+	</script>
+</body>
+</html>

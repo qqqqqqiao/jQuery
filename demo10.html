@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo10</title>
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+</head>
+<body>
+	<div id='d1'>0</div>
+	<button id="b1">click</button>
+
+	<script type="text/javascript">
+		var n = 0;
+		$('#b1').click(function(event) {
+			n=n+1;
+			$('#d1').html(n);
+		});
+
+	</script>
+</body>
+</html>

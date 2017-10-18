@@ -11,12 +11,49 @@
 		<p>2</p>
 		<p>3</p>
 		<button id="b1">click</button>
+
+		<div id="d1">
+			<div id="d2">
+				<p id="p1">hello</p>
+			</div>
+		</div>
+
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
 	</div>
+
+	<input type="text" value="hello" />
+	<p id="p2"></p>
 	<script type="text/javascript">
 		$('#b1').bind('click', function(event) {
 			$('div p:eq(1)').replaceWith('<p>222</p>');
 		});
 		
+		$(document).ready(function(){
+			$('#p1').unwrap();
+
+			$('li').each(function(index, element){
+				if(index%2){
+					$(this).css('color', 'blue');
+				}
+			});
+
+			console.log($('#b1').attr('id'));
+		});
+
+		$('input').focusin(function(){
+			$(this).val('');
+		});
+		$('input').focusout(function(){
+			$(this).val('hello');
+		});
+		$('input').change(function(e){
+			$('#p2').html(e.target.value);
+		})
 	</script>
 </body>
 </html>

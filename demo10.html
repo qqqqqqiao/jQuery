@@ -8,6 +8,10 @@
 <body>
 	<div id='d1'>0</div>
 	<button id="b1">click</button>
+	<br>
+	<input type="text" value="Hello World">
+	<br><br>
+	<button>触发输入框的 select 事件</button>
 
 	<script type="text/javascript">
 		var n = 0;
@@ -15,6 +19,16 @@
 			n=n+1;
 			$('#d1').html(n);
 		});
+
+		$(document).ready(function(){
+			  
+			  $("button").click(function(){
+			    $("input").triggerHandler('select');
+			  });
+		});
+		$("input").select(function(){
+			    $("input").after("文本已选中!");
+			  });
 
 	</script>
 </body>

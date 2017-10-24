@@ -3,8 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<title>demo11</title>
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
 </head>
 <body>
+	<span style="display:none; background-color:Blue">隐藏区域</span>
+	<span style=" background-color:Green">显示区域</span><br />
+	<span style="visibility:hidden; background-color:Blue">隐藏区域</span>
+	<span style="background-color:Green">显示区域</span>
 	
+	<span class='c1' style="background-color:Green">toggle</span>
+	<button id="b1">click</button>
+
+	<select id="s1">
+		<option value="11">1</option>
+		<option>2</option>
+	</select>
+	<script type="text/javascript">
+		$('#b1').click(function(){
+			$('.c1').toggle();
+		});
+
+		$('#s1').change(function() {
+			console.log(this.value);
+		});
+	</script>
 </body>
 </html>
